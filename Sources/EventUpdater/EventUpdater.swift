@@ -8,10 +8,7 @@ public protocol EventUpdater: AnyObject {
     var timeInterval: TimeInterval { get set }
 
     func eventHandler()
-
-    func startUpdating()
-    func stopUpdating()
-
+    
 }
 
 extension EventUpdater {
