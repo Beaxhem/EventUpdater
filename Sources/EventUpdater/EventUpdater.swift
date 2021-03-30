@@ -13,7 +13,7 @@ public protocol EventUpdater: AnyObject {
 
 extension EventUpdater {
 
-    func startUpdating() {
+    public func startUpdating() {
 
         let queue = DispatchQueue(label: "com.beaxhem.timer.\(String(describing: self))", attributes: .concurrent)
         timer = DispatchSource.makeTimerSource(queue: queue)
@@ -27,7 +27,7 @@ extension EventUpdater {
         timer?.resume()
     }
 
-    func stopUpdating() {
+    public func stopUpdating() {
         timer = nil
     }
 }
